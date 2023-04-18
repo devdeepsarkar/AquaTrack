@@ -206,7 +206,7 @@ body {
   /* position: relative; */
   /* width: 80%; */
   /* margin: 10px; */
-  overflow: auto;
+  overflow:visible ;
   margin-top: 10vh;
   min-height: 100vh;
   /* padding: 30px; */

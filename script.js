@@ -76,7 +76,7 @@ const dataRef = database.ref("readings/" + year + "/" + month + "/" + "18");
     options: {
       // alignToPixels: true,
       indexAxis: 'y',
-      responsive: true,
+      // responsive: true,
       maintainAspectRatio: false,
       scales: {
         y: {
