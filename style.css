@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+
+.inner-header {
+  height: 80vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+.stack1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.wrapper {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  width: 300px;
+  min-height: 50%;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.wrapper .card .circle {
+  position: relative;
+  height: 100px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.card .box,
+.card .box span {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+}
+.card .circle .box {
+  height: 100%;
+  width: 100%;
+  /* background: #463658; */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.card .circle:hover .box {
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text {
+  background: -webkit-linear-gradient(left, #28313B, #485461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle .box span {
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.card .circle:hover .box span {
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media (max-width: 753px) {
+  .wrapper {
+    max-width: 700px;
+  }
+  .wrapper .card {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 505px) {
+  .wrapper {
+    max-width: 500px;
+  }
+  .wrapper .card {
+    width: 70%;
+  }
+}
+
+/* chart */
+.stack2 {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 10;
+  /* background: #e0e0e0; */
+}
+
+.chart-container {
+  /* position: relative; */
+  /* width: 80%; */
+  margin: 10px;
+  margin-top: 20vh;
+  padding: 30px;
+  /* width: 400px;
+  height: 300px; */
+  border-radius: 13px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 8px 8px 16px #5a5a5a, -8px -8px 16px #ffffff;
+
+  /* padding: 10; */
+  /* background: #e0e0e0; */
+}
