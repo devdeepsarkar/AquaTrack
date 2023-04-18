@@ -64,7 +64,7 @@ const dataRef = database.ref("readings/" + year + "/" + month + "/" + "18");
           backgroundColor: "rgba(84, 58, 183, 1)",
           // borderColor: "rgba(75, 192, 192, 1)",
           borderWidth: 1,
-          borderRadius: 7,
+          borderRadius: 10,
           fill: {
               target: 'origin',
             }
@@ -74,11 +74,18 @@ const dataRef = database.ref("readings/" + year + "/" + month + "/" + "18");
       ],
     },
     options: {
-      alignToPixels: true,
+      // alignToPixels: true,
       indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true, // Start y-axis from zero
+        },
+    }
 
     },
-    responsive: true,
+    // responsive: true,
   });
 
 // Update chart with data from Firebase Realtime Database

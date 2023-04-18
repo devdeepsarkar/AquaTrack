@@ -205,9 +205,11 @@ body {
 .chart-container {
   /* position: relative; */
   /* width: 80%; */
-  margin: 10px;
-  margin-top: 20vh;
-  padding: 30px;
+  /* margin: 10px; */
+  overflow: auto;
+  margin-top: 10vh;
+  min-height: 100vh;
+  /* padding: 30px; */
   /* width: 400px;
   height: 300px; */
   border-radius: 13px;
@@ -217,3 +219,5 @@ body {
   /* padding: 10; */
   /* background: #e0e0e0; */
 }
+
+
