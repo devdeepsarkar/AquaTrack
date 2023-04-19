@@ -59,7 +59,7 @@ const chart = new Chart(ctx, {
     labels: [],
     datasets: [
       {
-        label: "Water Intake",
+        label: "Water Intake (ml)",
         data: [],
         backgroundColor: "rgba(84, 58, 183, 1)",
         // borderColor: "rgba(75, 192, 192, 1)",
@@ -79,10 +79,20 @@ const chart = new Chart(ctx, {
     // responsive: true,
     maintainAspectRatio: false,
     scales: {
-      y: {
-        beginAtZero: true, // Start y-axis from zero
+      x: {
+        title: {
+          display: true,
+          text: 'Water Intake (ml)',
+        }
       },
-    }
+      y: {
+        title: {
+          display: true,
+          text: 'Time',
+        },
+        beginAtZero: true,
+      },
+    },
     
   },
   // responsive: true,
@@ -118,7 +128,7 @@ dataRef.on(
           .text(String(stepValue.toFixed(2).substr(2)) + "%");
       });
       $(".per .bar").circleProgress({
-        value: 1 - ((total % 1000) / 1000),
+        value: total >= 1040 ? 0.99 : (1 - ((total % 1057) / 1057))
       });
       document.getElementById("text").innerHTML = parseInt(total) + "ml / 3000ml";
     document.getElementById("filled").innerHTML = "Filled";
@@ -138,13 +148,13 @@ showGraph();
 // Show graph with date
 
 const datePicker = document.getElementById('datepicker');
-const btn = document.getElementById('btn');
 
-const today = new Date().toISOString().split('T')[0];
+const today = year + "-" + String(month).padStart(2, '0') + "-" + String(day).padStart(2, '0');
 
 datePicker.setAttribute('max', today);
+datePicker.value = today;
 
-btn.addEventListener('click', (event) => {
+datePicker.addEventListener('change', (event) => {
   const selectedDate = new Date(datePicker.value);
   const year = selectedDate.getFullYear();
   const month = String(selectedDate.getMonth() + 1);

@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&display=swap');
 body {
   margin: 0;
 }
@@ -21,6 +21,13 @@ body {
     rgba(0, 172, 193, 1) 100%
   );
   color: white;
+}
+
+.logo{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: white;
 }
 
 .inner-header {
@@ -149,14 +156,28 @@ body {
   font-weight: bolder;
 }
 .date{
-  position: relative;
-  top: 40px;
+  position: absolute;
+  right: 60px;
+  top: 10px;
   background: -webkit-linear-gradient(left, #28313B, #485461);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Lilita One';
   font-size: 21px;
   font-weight: bolder;
+}
+.aquatrack{
+  position: absolute;
+  left: 50px;
+  top: 5px;
+  background: -webkit-linear-gradient(60deg,
+  rgba(84, 58, 183, 1) 0%,
+  rgba(0, 172, 193, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 21px;
+  font-weight: 900;
 }
 .bar{
   position: absolute;
@@ -238,6 +259,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 10;
+  overflow: visible;
   /* background: #e0e0e0; */
 }
 
@@ -278,21 +300,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* A few custom styles for date inputs */
 input[type="date"] {
-  appearance: none;
-  -webkit-appearance: none;
-  color: #95a5a6;
+  color: #535353;
   font-family: "Helvetica", arial, sans-serif;
-  font-size: 18px;
-  border:1px solid #ecf0f1;
-  background:#ecf0f1;
+  font-size: 15px;
   padding:5px;
-  display: inline-block !important;
-  visibility: visible !important;
 }
-
-input[type="date"], focus {
-  color: #95a5a6;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+.datepicker{
+  position: relative;
+  margin-top: 50px;
+  top: 50px;
+  margin-bottom: 20px;
+  left: 30%;
 }
