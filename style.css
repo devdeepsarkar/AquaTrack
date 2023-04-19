@@ -5,6 +5,8 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 body {
   margin: 0;
 }
@@ -136,11 +138,46 @@ body {
   border-radius: 50%;
   cursor: default;
 }
+.filled{
+  position: relative;
+  top: -24%;
+  background: -webkit-linear-gradient(left, #28313B, #485461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Lilita One';
+  font-size: 21px;
+  font-weight: bolder;
+}
+.date{
+  position: relative;
+  top: 40px;
+  background: -webkit-linear-gradient(left, #28313B, #485461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Lilita One';
+  font-size: 21px;
+  font-weight: bolder;
+}
+.bar{
+  position: absolute;
+  top: -100%;
+}
+
+.goals{
+  position: absolute;
+  top: 60%;
+  background: -webkit-linear-gradient(left, #28313B, #485461);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Lilita One';
+  font-size: 21px;
+  font-weight: bolder;
+}
 
 .card .box,
 .card .box span {
   position: absolute;
-  top: 60%;
+  top: 0%;
   left: 50%;
 }
 .card .circle .box {
@@ -171,6 +208,8 @@ body {
   transform: translate(-45%, -45%) scale(1.09);
 }
 .card .text {
+  position: absolute;
+  top: 70%;
   font-size: 20px;
   font-weight: 600;
 }
@@ -213,11 +252,47 @@ body {
   /* width: 400px;
   height: 300px; */
   border-radius: 13px;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 8px 8px 16px #5a5a5a, -8px -8px 16px #ffffff;
+  /* background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 8px 8px 16px #5a5a5a, -8px -8px 16px #ffffff; */
 
   /* padding: 10; */
   /* background: #e0e0e0; */
 }
 
 
+/* date */
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+  display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #95a5a6;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  border:1px solid #ecf0f1;
+  background:#ecf0f1;
+  padding:5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+input[type="date"], focus {
+  color: #95a5a6;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
