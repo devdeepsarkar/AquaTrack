@@ -21,37 +21,6 @@ const database = firebase.database();
 // Reference to the Firebase database node to fetch data from
 let dataRef = database.ref("readings/" + year + "/" + month + "/" + day);
 
-
-// Fetch data from the Firebase node
-// dataRef.once("value").then((snapshot) => {
-  //   const data = snapshot.val();
-
-//   if (data) {
-//     const labels = Object.keys(data);
-//     const values = Object.values(data);
-//     const total = values.reduce((sum, value) => sum + value, 0);
-
-//     let options = {
-//       startAngle: -1.55,
-//       size: 150,
-//       value: 1,
-//       fill: { gradient: ["#28313B", "#485461"] },
-//     };
-//     $(".circle .bar")
-//       .circleProgress(options)
-//       .on("circle-animation-progress", function (event, progress, stepValue) {
-  //         $(this)
-//           .parent()
-//           .find("span")
-//           .text(String(stepValue.toFixed(2).substr(2)) + "%");
-//       });
-//     $(".per .bar").circleProgress({
-  //       value: (1000-total) / 1000,
-  //     });
-//     document.getElementById("text").innerHTML = total + "ml / 3000ml";
-//   }
-// });
-
 const ctx = document.getElementById("myChart").getContext("2d");
 const chart = new Chart(ctx, {
   type: "bar",
