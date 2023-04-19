@@ -128,7 +128,7 @@ dataRef.on(
           .text(String(stepValue.toFixed(2).substr(2)) + "%");
       });
       $(".per .bar").circleProgress({
-        value: total >= 1040 ? 0.99 : (1 - ((total % 1057) / 1057))
+        value: total <= 15 ? 0.99 : ((total % 1000) / 1057)
       });
       document.getElementById("text").innerHTML = parseInt(total) + "ml / 3000ml";
     document.getElementById("filled").innerHTML = "Filled";
