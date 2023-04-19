@@ -88,7 +88,7 @@ const chart = new Chart(ctx, {
       y: {
         title: {
           display: true,
-          text: 'Time',
+          text: 'Time (hh:mm:ss)',
         },
         beginAtZero: true,
       },
